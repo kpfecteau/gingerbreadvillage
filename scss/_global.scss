@@ -89,3 +89,9 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: $gray-darker;
 }
+
+#google-map {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+}

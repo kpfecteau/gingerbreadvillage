@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Createive v4.0.0-beta (http://startbootstrap.com/template-overviews/creative)
+ * Start Bootstrap - Createive v4.0.0-beta (https://startbootstrap.com/template-overviews/creative)
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
  */
@@ -76,6 +76,11 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: #222222; }
+
+#google-map {
+  width: 100%;
+  max-width: 600px;
+  height: 450px; }
 
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
