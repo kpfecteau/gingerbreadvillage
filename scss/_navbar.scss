@@ -5,6 +5,7 @@
   @include sans-serif-font;
   @include transition-all;
   .navbar-brand {
+    font-size: .8em;
     font-weight: 700;
     text-transform: uppercase;
     color: $theme-primary;
@@ -39,6 +40,11 @@
           }
         }
       }
+    }
+  }
+  @media (min-width: 576px) {
+    .navbar-brand {
+      font-size: 1.25em;
     }
   }
   @media (min-width: 992px) {

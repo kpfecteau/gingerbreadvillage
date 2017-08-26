@@ -61,11 +61,15 @@
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0, 1]
+      preload: [0, 3]
     },
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
   });
+  
+  for(var i=0; i <= 1132; i++) {
+       $('#gallery .popup-gallery').append('<a class="portfolio-box" href="img/gallery/gingerbread/'+i+'.jpg"></a>');
+   }
 
 })(jQuery); // End of use strict
