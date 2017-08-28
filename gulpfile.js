@@ -6,6 +6,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var changed = require('gulp-changed');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -121,18 +122,23 @@ gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() 
 
 gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy'], function() {
   gulp.src(['css/**'])
+    .pipe(changed('production/css', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/css'))
     
   gulp.src(['img/**'])
+    .pipe(changed('production/img', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/img'))
     
   gulp.src(['js/**'])
+    .pipe(changed('production/js', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/js'))
     
   gulp.src(['vendor/**'])
+    .pipe(changed('production/vendor', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/vendor'))
     
   gulp.src(['index.html'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/'))
 });
 
