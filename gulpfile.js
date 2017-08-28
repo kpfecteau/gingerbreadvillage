@@ -137,10 +137,6 @@ gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy'], function() {
     .pipe(changed('production/vendor', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/vendor'))
     
-  gulp.src(['index.html'])
-    .pipe(changed('production/', {hasChanged: changed.compareContents}))
-    .pipe(gulp.dest('production/'))
-    
   gulp.src(['android-chrome-192x192.png'])
     .pipe(changed('production/', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/'))
@@ -179,6 +175,9 @@ gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy'], function() {
     
   gulp.src(['safari-pinned-tab.svg'])
     .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['index.html'])
     .pipe(gulp.dest('production/'))
 });
 
