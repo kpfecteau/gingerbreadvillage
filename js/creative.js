@@ -65,6 +65,14 @@
     },
     image: {
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+    },
+    callbacks: {
+      open: function () {
+        FB.AppEvents.logEvent("galleryOpened");
+      },
+      close: function () {
+        FB.AppEvents.logEvent("galleryClosed");
+      }
     }
   });
   

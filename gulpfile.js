@@ -121,7 +121,7 @@ gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() 
 });
 
 gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy'], function() {
-  gulp.src(['css/**'])
+  gulp.src(['css/*'])
     .pipe(changed('production/css', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/css'))
     
@@ -129,7 +129,7 @@ gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy'], function() {
     .pipe(changed('production/img', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/img'))
     
-  gulp.src(['js/**'])
+  gulp.src(['js/*'])
     .pipe(changed('production/js', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/js'))
     
