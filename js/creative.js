@@ -69,7 +69,7 @@
   });
   
   for(var i=0; i <= 1132; i++) {
-       $('#gallery .popup-gallery').append('<a class="portfolio-box" href="img/gallery/gingerbread/'+i+'.jpg"></a>');
-   }
+    $('#gallery .popup-gallery').append('<a class="portfolio-box" href="img/gallery/gingerbread/'+i+'.jpg"></a>');
+  }
 
 })(jQuery); // End of use strict
