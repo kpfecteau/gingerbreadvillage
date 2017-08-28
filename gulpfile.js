@@ -140,5 +140,45 @@ gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy'], function() {
   gulp.src(['index.html'])
     .pipe(changed('production/', {hasChanged: changed.compareContents}))
     .pipe(gulp.dest('production/'))
+    
+  gulp.src(['android-chrome-192x192.png'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['android-chrome-512x512.png'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['apple-touch-icon.png'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['browserconfig.xml'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['favicon-16x16.png'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['favicon-32x32.png'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['favicon.ico'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['manifest.json'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['mstile-150x150.png'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
+    
+  gulp.src(['safari-pinned-tab.svg'])
+    .pipe(changed('production/', {hasChanged: changed.compareContents}))
+    .pipe(gulp.dest('production/'))
 });
 
