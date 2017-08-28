@@ -118,3 +118,21 @@ gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() 
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('js/**/*.js', browserSync.reload);
 });
+
+gulp.task('build', ['sass', 'minify-css', 'minify-js', 'copy'], function() {
+  gulp.src(['css/**'])
+    .pipe(gulp.dest('production/css'))
+    
+  gulp.src(['img/**'])
+    .pipe(gulp.dest('production/img'))
+    
+  gulp.src(['js/**'])
+    .pipe(gulp.dest('production/js'))
+    
+  gulp.src(['vendor/**'])
+    .pipe(gulp.dest('production/vendor'))
+    
+  gulp.src(['index.html'])
+    .pipe(gulp.dest('production/'))
+});
+
