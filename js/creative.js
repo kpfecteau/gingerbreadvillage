@@ -68,10 +68,14 @@
     },
     callbacks: {
       open: function () {
-        FB.AppEvents.logEvent("galleryOpened");
+        if (typeof FB !== 'undefined') {
+          FB.AppEvents.logEvent("galleryOpened");
+        }
       },
       close: function () {
-        FB.AppEvents.logEvent("galleryClosed");
+        if (typeof FB !== 'undefined') {
+          FB.AppEvents.logEvent("galleryClosed");
+        }
       }
     }
   });
