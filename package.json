@@ -1,29 +1,15 @@
 {
-  "title": "Createive",
-  "name": "startbootstrap-creative",
-  "version": "4.0.0-beta",
-  "description": "Creative is a stylish one page HTML theme for Bootstrap.",
-  "keywords": [
-    "css",
-    "sass",
-    "html",
-    "responsive",
-    "theme",
-    "template"
-  ],
-  "homepage": "https://startbootstrap.com/template-overviews/creative",
-  "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-creative/issues",
-    "email": "feedback@startbootstrap.com"
+  "name": "gingerbreadvillage",
+  "version": "1.0.0",
+  "liscence": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">= 10.14.2",
+    "npm": ">= 6.4.1"
   },
-  "license": "MIT",
-  "author": "Start Bootstrap",
-  "contributors": [
-    "David Miller (http://davidmiller.io/)"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
+  "scripts": {
+    "build" : "npx gulp build",
+    "server" : "npx gulp dev"
   },
   "dependencies": {
     "bootstrap": "4.0.0-beta",
