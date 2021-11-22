@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./node_modules/.bin/gulp build
+npx gulp build
 find production/ -name ".DS_Store" -delete
 aws s3 sync --profile gb-deploy --acl public-read --sse --delete production/ s3://www.gingerbreadvillagect.com
 aws configure set preview.cloudfront true --profile gb-deploy
