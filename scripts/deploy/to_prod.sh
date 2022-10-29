@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf production/
 npx gulp build
 find production/ -name ".DS_Store" -delete
 aws s3 sync --profile gb-deploy --acl public-read --sse --delete production/ s3://www.gingerbreadvillagect.com
