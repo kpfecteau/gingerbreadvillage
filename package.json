@@ -21,7 +21,7 @@
     "scrollreveal": "3.3.6"
   },
   "devDependencies": {
-    "aws-sdk": "^2.1032.0",
+    "aws-sdk": "^2.1354.0",
     "browser-sync": "2.18.13",
     "gulp": "3.9.1",
     "gulp-changed": "3.1.0",
