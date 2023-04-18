@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "aws-sdk": "^2.1032.0",
-    "browser-sync": "2.18.13",
-    "gulp": "3.9.1",
+    "browser-sync": "2.29.1",
+    "gulp": "4.0.2",
     "gulp-changed": "3.1.0",
     "gulp-clean-css": "3.7.0",
     "gulp-header": "1.8.9",
