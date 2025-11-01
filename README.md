@@ -1,62 +1,139 @@
-# [Start Bootstrap - Creative](https://startbootstrap.com/template-overviews/creative/)
+# Gingerbread Village - St. George's Episcopal Church
 
-[Creative](http://startbootstrap.com/template-overviews/creative/) is a one page creative theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+A simple, modern static website for the annual Gingerbread Village & Christmas Bazaar event at St. George's Episcopal Church in Middlebury, CT.
 
-## Preview
+## 🎄 About
 
-[![Creative Preview](https://startbootstrap.com/assets/img/templates/creative.jpg)](https://blackrockdigital.github.io/startbootstrap-creative/)
+The 56th Annual Gingerbread Village & Christmas Bazaar is a beloved holiday tradition featuring gingerbread house displays, a Christmas bazaar, and festive activities. This website provides event information, hours, and directions.
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-creative/)**
+**Event Dates:** December 7-14, 2024
+**Location:** 393 Tucker Hill Road, Middlebury, CT 06762
+**Website:** https://www.gingerbreadvillagect.com
 
-## Status
+## 🚀 Features
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-creative/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-creative.svg)](https://www.npmjs.com/package/startbootstrap-creative)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-creative.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-creative)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-creative/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-creative)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-creative/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-creative?type=dev)
+- **Pure Static Site** - No build process, no npm dependencies
+- **Responsive Design** - Works beautifully on all devices
+- **Optimized Performance** - Fast loading with optimized images
+- **Modern CSS** - Custom properties, flexbox, responsive design
+- **Google Fonts** - Beautiful typography with Kranky and Truculenta fonts
+- **Analytics** - Google Analytics 4 integration
+- **Social Sharing** - Open Graph metadata for Facebook/Twitter
+- **AWS Hosted** - S3 + CloudFront for global performance
 
-## Download and Installation
+## 📁 Structure
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/creative/)
-* Install via npm: `npm i startbootstrap-creative`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-creative.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-creative)
+```
+/
+├── index.html          # Main HTML page
+├── index.css           # Styles with CSS variables
+├── img/
+│   ├── header.jpg      # Hero image (1.0MB)
+│   └── og-image.jpg    # Social sharing image (243KB)
+├── favicons/           # Various favicon formats
+└── scripts/deploy/
+    └── to_prod.sh      # Deployment script
+```
 
-## Usage
+## 🛠️ Development
 
-### Basic Usage
+**Local Testing:**
+```bash
+# Option 1: Open directly in browser
+open index.html
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+# Option 2: Use Python's built-in server
+python3 -m http.server 8000
+# Visit http://localhost:8000
+```
 
-### Advanced Usage
+**Making Changes:**
+- Edit `index.html` for content changes
+- Edit `index.css` for styling changes
+- Refresh your browser to see updates
+- No build process needed!
 
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+## 🚢 Deployment
 
-## Bugs and Issues
+**Prerequisites:**
+- AWS CLI configured with `gb-deploy` profile
+- Access to S3 bucket: `www.gingerbreadvillagect.com`
+- Access to CloudFront distribution: `E2T4L0EV8WQEB2`
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-creative/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/creative/).
+**Deploy to Production:**
+```bash
+./scripts/deploy/to_prod.sh
+```
 
-## Custom Builds
+The script will:
+1. Sync all files to S3 (excluding git, scripts, docs)
+2. Invalidate CloudFront cache for immediate updates
 
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
+## 🎨 Design
 
-## About
+**Color Scheme:**
+- Primary Green: `#0F8A5F`
+- Secondary Green: `#34A65F`
+- Red accent for festive headers
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+**Typography:**
+- **Kranky** - Playful serif font for headers
+- **Truculenta** - Clean sans-serif for body text
 
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
+**Layout:**
+- Responsive card-based schedule display
+- Embedded Google Maps for directions
+- Candy cane SVG pattern background
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
+## 📊 Performance
 
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+- **HTML:** ~6KB
+- **CSS:** ~9KB
+- **Images:** ~1.0MB (optimized)
+- **Total:** ~1.01MB per page load
+- **CloudFront CDN** for fast global delivery
+- **Gzip compression** enabled
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+## 🖼️ Image Optimization
 
-## Copyright and License
+Images have been optimized from 4.3MB PNG to 1.0MB JPEG using macOS `sips` command.
 
-Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-creative/blob/gh-pages/LICENSE) license.
+**To update images in the future:**
+
+```bash
+# Optimize a new header image (PNG → JPEG at 90% quality)
+sips -s format jpeg -s formatOptions 90 new-header.png --out img/header.jpg
+
+# Create new social sharing image (1200x630px)
+sips -z 630 1200 img/header.jpg --out img/og-image.jpg
+```
+
+**Current optimized images:**
+- `header.jpg` - 1.0MB (1920x1280px) - Hero image
+- `og-image.jpg` - 243KB (1200x630px) - Social sharing
+
+## 📝 License
+
+MIT License - See LICENSE file for details
+
+## 🙏 Credits
+
+- **Original Template:** Start Bootstrap Creative (heavily simplified)
+- **Church:** St. George's Episcopal Church, Middlebury, CT
+- **Hosting:** AWS S3 + CloudFront
+- **Fonts:** Google Fonts (Kranky, Truculenta)
+
+## 📞 Contact
+
+**St. George's Episcopal Church**
+393 Tucker Hill Road
+Middlebury, CT 06762
+Phone: (203) 758-9864
+Website: https://www.stgeorgesct.com
+
+**For Large Groups:**
+Barbara Fecteau: (203) 217-4246
+
+---
+
+*This site was rebuilt in 2024 to be a simple, fast, zero-dependency static website.*
